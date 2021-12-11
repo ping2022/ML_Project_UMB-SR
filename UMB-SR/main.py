@@ -84,7 +84,7 @@ if __name__ == '__main__':
             hit, mrr = train_predict_mkm(model, train_processed, test_processed, item_ids, itemid2index, epoch)
             hit_list.append(hit)
             mrr_list.append(mrr)
-            print('the epoch \tRecall@20:\t%.4f\tMMR@20:\t%.4f\t' % (hit, mrr))
+            print('the epoch \tHit@20:\t%.4f\tMRR@20:\t%.4f\t' % (hit, mrr))
             flag = 0
             if hit >= best_result[0]:
                 best_result[0] = hit
@@ -96,7 +96,7 @@ if __name__ == '__main__':
                 flag = 1
             
             print('Best Result:')
-            print('\tRecall@20:\t%.4f\tMMR@20:\t%.4f\tEpoch:\t%d,\t%d' % (
+            print('\tHit@20:\t%.4f\tMRR@20:\t%.4f\tEpoch:\t%d,\t%d' % (
                 best_result[0], best_result[1], best_epoch[0], best_epoch[1]))
             bad_counter += 1 - flag
             print('the single epoch time is :%d s' % (time.time() - epoch_start_time))
