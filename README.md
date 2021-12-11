@@ -39,4 +39,5 @@ optional arguments:
 
 # Reference
 [1]Wenjing Meng, Deqing Yang and Yanghua Xiao. 2020. Incorporating User Micro-behaviors and Item Knowledge into Multi-task Learning for Session-based Recommendation. In Proceedings of the 43rd International ACM.
+
 [2]https://github.com/ciecus/MKM-SR
