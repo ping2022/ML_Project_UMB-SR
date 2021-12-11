@@ -124,10 +124,10 @@ def item2id_out(df):
                             "index" : indexid})
 
     # write dataframe to entity2id file, no indexing needed
-    df_item.to_csv("MKM-SR/data/demo/no_new_item/entity2id", sep = '\t', index = False)  
+    df_item.to_csv("UMB-SR/data/demo/no_new_item/entity2id", sep = '\t', index = False)
 
 def data_processing(df,max_seq_len, is_train):
-    ''' Need to extract the four types of data needed by MKM-SR
+    ''' Need to extract the four types of data needed by UMB-SR
         data_paddings, data_operation_paddings, data_masks, data_targets
         Pseudo code plan:
         1. In the dataframe, extract the unique sequenceId
@@ -139,7 +139,7 @@ def data_processing(df,max_seq_len, is_train):
     '''
 
     sessionId_list = df["SessionId"].unique() # list of unique sessionId, step 1
-    itemid_list = pd.read_csv("MKM-SR/data/demo/no_new_item/entity2id", sep = "\t") 
+    itemid_list = pd.read_csv("UMB-SR/data/demo/no_new_item/entity2id", sep = "\t")
     itemid_list = itemid_list["itemid"] # need to get entire itemid_list
     data_targets = [] # list to store the target for each session
     data_paddings = []
@@ -185,10 +185,10 @@ def data_processing(df,max_seq_len, is_train):
             data_masks[index] = seq_mask
     train_process_data = [data_paddings, data_operation_paddings, data_masks, data_targets]
     if(is_train):
-        with open("MKM-SR/data/demo/no_new_item/MKM_SR/train_processed.pkl", 'wb') as file_1:
+        with open("UMB-SR/data/demo/no_new_item/UMB_SR/train_processed.pkl", 'wb') as file_1:
             pickle.dump(train_process_data, file_1, protocol = pickle.HIGHEST_PROTOCOL)
     else:
-        with open("MKM-SR/data/demo/no_new_item/MKM_SR/test_processed.pkl", 'wb') as file_1:
+        with open("UMB-SR/data/demo/no_new_item/UMB_SR/test_processed.pkl", 'wb') as file_1:
             pickle.dump(train_process_data, file_1, protocol = pickle.HIGHEST_PROTOCOL)
 
 # find the maximum session length of the dataframe

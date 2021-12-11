@@ -57,7 +57,7 @@ if __name__ == '__main__':
 
     if opt.mode == 'MKM_SR':
         print('the mode is :', opt.mode)
-        data_path = dataset + 'MKM_SR/'
+        data_path = dataset + 'UMB_SR/'
         entity2id_handle = pd.read_csv(dataset + 'entity2id', sep = '\t')
         item_ids = entity2id_handle['index'].unique()
         item_ids = np.delete(item_ids, [0])
