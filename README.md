@@ -22,7 +22,7 @@ command: python ./data_processing.py
 
 Then you can run the file ```main.py``` to train the model.
 ```
-···
+```
 usage: main.py 
 optional arguments:
   --dataset             dataset name
