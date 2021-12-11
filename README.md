@@ -3,7 +3,7 @@ Incorporating User Micro-behaviors into Multi-task Learning for Session-based Re
 
 
 # Module Data and Code
-This code is based on the SIGIR2020 Paper:Incorporating User Micro-behaviors and Item Knowledge into Multi-task Learning for Session-based Recommendation[1]. Our module is based on the MKM-SR module implemented in this paper[2].
+This code is based on the SIGIR2020 Paper: Incorporating User Micro-behaviors and Item Knowledge into Multi-task Learning for Session-based Recommendation[1]. Our module is based on the MKM-SR module implemented in this paper[2].
 
 The dataset we used for this module is from: https://www.kaggle.com/retailrocket/ecommerce-dataset
 
